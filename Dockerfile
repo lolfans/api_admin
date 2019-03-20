@@ -3,5 +3,6 @@ COPY / /usr/share/nginx/html/
 COPY /.env.sandbox /usr/share/nginx/html/.env
 COPY /supervisor/  /etc/supervisor/conf.d/
 
-RUN cd /usr/share/nginx/html
+WORKDIR /usr/share/nginx/html/
+RUN composer config -g repo.packagist composer https://packagist.phpcomposer.com
 RUN composer install
