@@ -7,3 +7,4 @@ WORKDIR /usr/share/nginx/html/
 RUN composer config -g repo.packagist composer https://packagist.phpcomposer.com
 RUN composer install
 RUN mkdir -p /usr/share/nginx/html/testbuild
+COPY /usr/share/nginx/html/vendor  /usr/share/nginx/html/
