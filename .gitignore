@@ -4,7 +4,6 @@ storage/framework/cache/data/
 storage/framework/views/
 storage/framework/sessions/
 storage/logs
-/vendor
 /.idea
 Homestead.json
 Homestead.yaml
