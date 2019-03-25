@@ -37,7 +37,6 @@ Route::group(['namespace'  => "Web"], function () {
         Route::resource('/roles',           'RoleController');
         Route::resource('/permissions',     'PermissionController');
         Route::resource('/list',            'RentShopController');
-        Route::resource('/areas',            'AreaController');
     });
 
 });
