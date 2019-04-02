@@ -1,4 +1,4 @@
-FROM registry.cn-qingdao.aliyuncs.com/liudashuai/nginx-php-supervisor-laravel:latest
+FROM liudashuai/docker-nginx-php-supervisor-simple:latest
 
 COPY ./ /usr/share/nginx/html/
 COPY ./.env.sandbox /usr/share/nginx/html/.env
