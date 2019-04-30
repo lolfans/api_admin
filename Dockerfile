@@ -4,7 +4,7 @@ COPY / /usr/share/nginx/html/
 COPY /.env.sandbox /usr/share/nginx/html/.env
 COPY /supervisor/  /etc/supervisor/conf.d/
 WORKDIR /usr/share/nginx/html/
-RUN composer install
+RUN cd /usr/share/nginx/html/ && composer install
 WORKDIR /
 RUN find -name php-console-color
 RUN find -name autoload.php
