@@ -7,6 +7,8 @@ WORKDIR /usr/share/nginx/html/
 RUN composer install
 WORKDIR /
 RUN find -name php-console-color
+RUN find -name autoload.php
+RUN find -name installed.json
 
 FROM liudashuai/docker-nginx-php-supervisor-simple:latest
 RUN mkdir -p /usr/share/nginx/html/vendor
