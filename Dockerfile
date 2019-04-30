@@ -1,9 +1,14 @@
-FROM liudashuai/docker-nginx-php-supervisor-simple:latest
-
+FROM liudashuai/docker-nginx-php-supervisor-simple:latest as base
 COPY ./ /usr/share/nginx/html/
 COPY ./.env.sandbox /usr/share/nginx/html/.env
 COPY ./supervisor/  /etc/supervisor/conf.d/
-
-RUN mkdir -p /usr/share/nginx/html/logistics-pause/dist
-
 WORKDIR /usr/share/nginx/html/
+Run composer install
+
+FROM liudashuai/docker-nginx-php-supervisor-simple:latest
+COPY --from=base /usr/share/nginx/html/ /usr/share/nginx/html/
+WORKDIR /usr/share/nginx/html/
+
+
+
+
