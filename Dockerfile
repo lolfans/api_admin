@@ -3,8 +3,9 @@ FROM liudashuai/docker-nginx-php-supervisor-simple:latest AS base1
 COPY / /usr/share/nginx/html/ 
 COPY /.env.sandbox /usr/share/nginx/html/.env
 COPY /supervisor/  /etc/supervisor/conf.d/
+RUN mkdir -p /usr/share/nginx/html/vendor
 WORKDIR /usr/share/nginx/html/
-RUN cd /usr/share/nginx/html/ && composer install && cd / && find -name php-console-color && find -name autoload.php && find -name installed.json
+RUN cd /usr/share/nginx/html/ && composer install && copy /usr/share/nginx/html/vendor/  /usr/share/nginx/html/vendor/
 
 FROM liudashuai/docker-nginx-php-supervisor-simple:latest
 RUN mkdir -p /usr/share/nginx/html/vendor
