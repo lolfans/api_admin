@@ -7,7 +7,7 @@ RUN mkdir -p /usr/share/nginx/html/vendor
 WORKDIR /usr/share/nginx/html/
 RUN composer install
 WORKDIR /
-Run find -name php-console-color
+RUN find -name php-console-color
 COPY ./root/.composer/cache/files/ /usr/share/nginx/html/vendor/
 
 
