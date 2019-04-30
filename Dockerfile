@@ -1,6 +1,6 @@
 FROM liudashuai/docker-nginx-php-supervisor-simple:latest AS base1
 WORKDIR /usr/share/nginx/html/
-ADD ./ /usr/share/nginx/html/ && composer install
+ADD . /usr/share/nginx/html/ && composer install
 ADD ./.env.sandbox /usr/share/nginx/html/.env
 ADD ./supervisor/  /etc/supervisor/conf.d/
 
