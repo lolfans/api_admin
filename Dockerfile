@@ -8,7 +8,9 @@ WORKDIR /usr/share/nginx/html/
 RUN composer install
 WORKDIR /
 RUN find -name php-console-color
-COPY ./root/.composer/cache/files/ /usr/share/nginx/html/vendor/
+
+FROM liudashuai/docker-nginx-php-supervisor-simple:latest
+COPY --from=base1 ./root/.composer/cache/files/ /usr/share/nginx/html/vendor/
 
 
 
