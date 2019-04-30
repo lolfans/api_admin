@@ -5,7 +5,6 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: api-admin
-      pushRemote: true
       registry: sandbox-images
 timeout: 60
 notification: {}
