@@ -7,7 +7,7 @@ Run composer install
 
 FROM liudashuai/docker-nginx-php-supervisor-simple:latest
 RUN mkdir -p /usr/share/nginx/html/vendor
-#COPY --from=base1 /usr/share/nginx/html/vendor/ /usr/share/nginx/html/vendor/
+COPY --from=base1 /usr/share/nginx/html/vendor/ /usr/share/nginx/html/vendor/
 WORKDIR /usr/share/nginx/html/
 
 
