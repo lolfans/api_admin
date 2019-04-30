@@ -8,3 +8,4 @@ storage/logs/*
 Homestead.json
 Homestead.yaml
 .env
+/vendor
