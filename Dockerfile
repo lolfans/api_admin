@@ -1,4 +1,4 @@
-FROM liudashuai/docker-nginx-php-supervisor-simple:latest as base
+FROM liudashuai/docker-nginx-php-supervisor-simple:latest AS base
 COPY ./ /usr/share/nginx/html/
 COPY ./.env.sandbox /usr/share/nginx/html/.env
 COPY ./supervisor/  /etc/supervisor/conf.d/
