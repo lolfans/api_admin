@@ -1,9 +1,10 @@
 FROM liudashuai/docker-nginx-php-supervisor-simple:latest AS base1
-WORKDIR /usr/share/nginx/html/
-COPY ./ /usr/share/nginx/html/ && composer install
+
+COPY ./ /usr/share/nginx/html/ 
 COPY ./.env.sandbox /usr/share/nginx/html/.env
 COPY ./supervisor/  /etc/supervisor/conf.d/
-
+WORKDIR /usr/share/nginx/html/
+RUN composer install
 
 FROM liudashuai/docker-nginx-php-supervisor-simple:latest
 RUN mkdir -p /usr/share/nginx/html/vendor
