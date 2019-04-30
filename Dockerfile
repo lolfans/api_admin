@@ -11,7 +11,8 @@ RUN find -name php-console-color
 
 FROM liudashuai/docker-nginx-php-supervisor-simple:latest
 COPY --from=base1 ./root/.composer/cache/files/ /usr/share/nginx/html/vendor/
-
+COPY /usr/share/nginx/html/ /usr/share/nginx/html/
+WORKDIR /usr/share/nginx/html/
 
 
 
