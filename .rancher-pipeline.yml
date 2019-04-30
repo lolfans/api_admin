@@ -6,10 +6,5 @@ stages:
       buildContext: .
       tag: api-admin
       registry: sandbox-images
-- name: clear
-  steps:
-  - runScriptConfig:
-      image: php:latest
-      shellScript: docker rmi $(docker images -q)
 timeout: 60
 notification: {}
