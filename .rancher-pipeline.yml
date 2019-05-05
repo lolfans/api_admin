@@ -6,7 +6,7 @@ stages:
       buildContext: .
       tag: api-admin
       pushRemote: true
-      registry: sandbox-images
+      registry: registry.cn-qingdao.aliyuncs.com
     when:
       branch:
         include:
