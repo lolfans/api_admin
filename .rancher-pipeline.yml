@@ -6,7 +6,7 @@ stages:
       buildContext: .
       tag: api-admin
       pushRemote: true
-      registry: registry.cn-qingdao.aliyuncs.com
+      registry: 127.0.0.1:34959
     when:
       branch:
         include:
