@@ -16,7 +16,7 @@ class CreateAdminPermissionMenuTable extends Migration {
 		{
 			$table->integer('permission_id');
 			$table->integer('menu_id');
-			$table->index(['permission_id','menu_id'], 'permission_menu_permission_id_menu_id_index');
+			$table->index(['permission_id','menu_id'], 'p_m_id_index');
 		});
 	}
 

@@ -16,7 +16,7 @@ class CreateAdminRoleMenuTable extends Migration {
 		{
 			$table->integer('role_id');
 			$table->integer('menu_id');
-			$table->index(['role_id','menu_id'], 'role_menu_role_id_menu_id_index');
+			$table->index(['role_id','menu_id'], 'menu_index');
 		});
 	}
 
