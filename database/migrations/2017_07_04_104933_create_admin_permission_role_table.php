@@ -15,7 +15,7 @@ class CreateAdminPermissionRoleTable extends Migration {
 		Schema::create('admin_permission_role', function(Blueprint $table)
 		{
 			$table->integer('permission_id')->unsigned();
-			$table->integer('role_id')->unsigned()->index('permission_role_role_id_foreign');
+			$table->integer('role_id')->unsigned()->index('role_foreign');
 			$table->primary(['permission_id','role_id']);
 		});
 	}
