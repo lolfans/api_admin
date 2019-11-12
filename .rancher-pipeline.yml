@@ -1,0 +1,15 @@
+stages:
+- name: step1
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: api-admin
+      pushRemote: true
+      registry: 127.0.0.1:34959
+    when:
+      branch:
+        include:
+        - master
+timeout: 60
+notification: {}
